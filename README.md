@@ -10,13 +10,11 @@
 La fase inicial es crucial y se centra en la preparación y transformación del dataset para su posterior análisis mediante técnicas de Procesamiento del Lenguaje Natural (PLN).
 
 ### Proceso de Limpieza y Organización
-Inspección Estructural: Se realiza una visualización inicial del conjunto de datos para comprender su conformación y la tipología de las variables.
+Inspección Estructural: Se realiza una visualización inicial del conjunto de datos para comprender su conformación y la forma de las variables.
 
-Gestión de Valores Nulos: Se emplea la función .info() para diagnosticar la cantidad de datos faltantes en las variables clave.
+Gestión de Valores Nulos: Se emplea la función .info() y df.isnull().sum() para diagnosticar la cantidad de datos faltantes y vacios en las variables clave. Posteriormente utilizamos df.drop_duplicates(inplace=True) para verificar archivos si existen archivos duplicados.
 
-Tratamiento de la Columna Emoción (Opcional): Si se decide usar la variable emotion como feature adicional, se deben gestionar sus posibles valores nulos o se puede optar por no incluirla si su tasa de valores faltantes o baja relevancia lo sugiere.
-
-Alineación de Etiquetas: La columna sentimiento del dataset de entrenamiento (dataset_train.csv) se duplica y renombra como etiqueta antes de la exportación final para cumplir con el formato de ranking (según la indicación: duplicar la columna sentimiento como etiqueta antes de exportar).
+Alineación de Etiquetas: La columna sentimiento del dataset de entrenamiento (dataset_train.csv) se renombra como etiqueta antes de la exportación final para cumplir con el formato de ranking.
 
 ---
 
@@ -24,11 +22,11 @@ Alineación de Etiquetas: La columna sentimiento del dataset de entrenamiento (d
 El modelo se entrena para establecer la relación entre el contenido del mensaje y su clasificación binaria de sentimiento.
 
 ### Variables Clave y Metodología
-Variable Independiente: text (Contenido textual a analizar). emotion es opcional como feature adicional.
+Variable Independiente: text (Contenido textual a analizar).
 
 Variable Dependiente: sentimiento (Etiqueta binaria: 1 = positivo, 0 = negativo).
 
-Vectorización: Se aplica un método de vectorización (ej. Bag-of-Words, TF-IDF) sobre la variable text para transformar el contenido textual en un formato numérico procesable por el modelo.
+Vectorización: Se aplica un método de vectorización sobre la variable text para transformar el contenido textual en un formato numérico procesable por el modelo.
 
 Para la validación interna del rendimiento, el conjunto de datos de entrenamiento es dividido mediante la técnica de train_test_split, reservando una porción para el entrenamiento y otra para la prueba.
 
@@ -40,7 +38,7 @@ La robustez del modelo se comprueba mediante la aplicación a un conjunto de dat
 ### Proceso de Generación y Validación de Predicciones
 Generación de Predicciones: El modelo entrenado se aplica al conjunto de datos de prueba externo (dataset_test_sin_sentimiento.csv), que carece de la columna sentimiento. El modelo genera y asigna los valores predictivos a esta columna.
 
-Entrega: El archivo resultante (dataset_test.csv), que contiene el id y la columna sentimiento agregada, es exportado para la validación en la plataforma de ranking.
+Entrega: El archivo resultante (submission.csv), que contiene el id y la columna sentimiento agregada (etiqueta), es exportado para la validación en la plataforma de ranking.
 
 ---
 
