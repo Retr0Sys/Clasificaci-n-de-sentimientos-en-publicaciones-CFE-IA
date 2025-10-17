@@ -12,7 +12,7 @@ La fase inicial es crucial y se centra en la preparación y transformación del 
 ### Proceso de Limpieza y Organización
 Inspección Estructural: Se realiza una visualización inicial del conjunto de datos para comprender su conformación y la forma de las variables.
 
-Gestión de Valores Nulos: Se emplea la función .info() y df.isnull().sum() para diagnosticar la cantidad de datos faltantes y vacios en las variables clave. Posteriormente utilizamos df.drop_duplicates(inplace=True) para verificar archivos si existen archivos duplicados.
+Gestión de Valores Nulos: Se emplea la función ".info()" y "df.isnull().sum()" para diagnosticar la cantidad de datos faltantes y vacios en las variables clave. Posteriormente utilizamos df.drop_duplicates(inplace=True) para verificar archivos si existen archivos duplicados.
 
 Alineación de Etiquetas: La columna sentimiento del dataset de entrenamiento (dataset_train.csv) se renombra como etiqueta antes de la exportación final para cumplir con el formato de ranking.
 
@@ -22,13 +22,14 @@ Alineación de Etiquetas: La columna sentimiento del dataset de entrenamiento (d
 El modelo se entrena para establecer la relación entre el contenido del mensaje y su clasificación binaria de sentimiento.
 
 ### Variables Clave y Metodología
-Variable Independiente: text (Contenido textual a analizar).
+Variable Independiente: "text" (Contenido textual a analizar).
 
-Variable Dependiente: sentimiento (Etiqueta binaria: 1 = positivo, 0 = negativo).
+Variable Dependiente: "sentimiento" (Etiqueta binaria: 1 = positivo, 0 = negativo).
 
 Vectorización: Se aplica un método de vectorización sobre la variable text para transformar el contenido textual en un formato numérico procesable por el modelo.
 
-Para la validación interna del rendimiento, el conjunto de datos de entrenamiento es dividido mediante la técnica de train_test_split, reservando una porción para el entrenamiento y otra para la prueba.
+Para la validación interna del rendimiento, el conjunto de datos de entrenamiento es dividido mediante la técnica de "train_test_split", reservando una porción para el entrenamiento y otra para la prueba. Podemos observar la calidad de nuestro modelo utilizando la función "accuracy_score" para comprobar mediante porcentaje que tan certero es el modelo.
+
 
 --- 
 
