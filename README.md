@@ -44,6 +44,6 @@ Entrega: El archivo resultante (submission.csv), que contiene el id y la columna
 ---
 
 ## 4. Resultados
-<div align="center"> <img width="800" alt="Métrica de Desempeño del Modelo" src="https://github.com/user-attachments/assets/7c9234c8-a0bc-4450-a0a6-d1fba6ad1ade" /> </div>
+<div align="center"> <img width="800" alt="Métrica de Desempeño del Modelo" src="https://github.com/user-attachments/assets/239e838a-10c5-4490-a528-375d8efda7f6" /> </div>
 
-El modelo ha demostrado una alta tasa de efectividad, siendo el porcentaje de acierto estimado mayor al 80% 
+El modelo ha demostrado una alta tasa de efectividad, siendo el porcentaje de acierto estimado mayor al 80%. Se ha optado por no usar la columna "emotion" por su alta cantidad de datos a modificar para su uso.
