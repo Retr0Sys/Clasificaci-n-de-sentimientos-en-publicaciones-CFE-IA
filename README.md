@@ -1,5 +1,5 @@
 ## Clasificación de Sentimientos CFE IA
-## Este proyecto presenta la implementación de un modelo de Aprendizaje Supervisado (Regresión Logística) desarrollado en Python para la clasificación binaria de sentimientos a partir de texto. El objetivo es clasificar los mensajes de texto como positivo (1) o negativo (0), mediante la identificación de patrones lingüísticos y, opcionalmente, la incorporación de características de emoción adicionales.
+## Este proyecto presenta la implementación de un modelo de Aprendizaje Supervisado (Regresión Logística) desarrollado en Python para la clasificación binaria de sentimientos a partir de texto. El objetivo es clasificar los mensajes de texto como positivo (1) o negativo (0), mediante la identificación de patrones lingüísticos.
 ---
 
 <div align="center"> <img src="https://github.com/user-attachments/assets/cf22be69-13d2-41ec-8ec1-59e212b3ab2e" alt="afa0e8_0be0c0c7217d427dbc939dbd0017eea7" width="800"> </div>
